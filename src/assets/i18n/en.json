@@ -1,0 +1,14 @@
+{
+  "loading": "Loading",
+  "sidebar": {
+    "home": "Home"
+  },
+  "home": {
+    "title": "Home page",
+    "text": "This is some text in English at home page"
+  },
+  "not-found": {
+    "title": "Not Found",
+    "text": "Page Not Found"
+  }
+}
