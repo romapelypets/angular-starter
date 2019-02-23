@@ -7,3 +7,15 @@
 - `npm run ssr` - for server-side rendering
 - `npm run server` - to start the server
 - `npm run build:universal` - for assembly in release
+
+## Progressive Web Application
+### How to get started
+- `npm run prod`
+
+Serving with http-server
+
+Because ng serve does not work with service workers, you must use a separate HTTP server to test your project locally. You can use any HTTP server. The example below uses the http-server package from npm. To reduce the possibility of conflicts and avoid serving stale content, test on a dedicated port and disable caching.
+
+To serve the directory containing your web files with http-server, run the following command:
+`cd dist/browser`
+`http-server -p 8080`
