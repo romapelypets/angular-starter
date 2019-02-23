@@ -4,10 +4,17 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "dev": "ng serve -0",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ssr": "npm run build:universal && npm run compile:server && npm run generate:prerender && npm run server",
+    "server": "node dist/server.js",
+    "generate:prerender": "node dist/prerender.js",
+    "compile:server": "tsc -p server.tsconfig.json",
+    "build": "ng build",
+    "build:server": "ng run angular-starter:server:production",
+    "build:universal": "npm run build --prod && ng run angular-starter:server:production && webpack --config webpack.server.config.js --progress --colors"
   },
   "private": true,
   "dependencies": {
@@ -16,16 +23,22 @@
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
     "@angular/forms": "~7.2.0",
+    "@angular/http": "^7.2.6",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/platform-server": "^7.2.6",
     "@angular/router": "~7.2.0",
     "@nguniversal/express-engine": "^7.1.0",
+    "@nguniversal/module-map-ngfactory-loader": "^7.1.0",
     "@ngx-meta/core": "^7.0.0",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "core-js": "^2.5.4",
+    "express": "^4.16.4",
     "rxjs": "~6.3.3",
+    "ts-loader": "^5.3.3",
     "tslib": "^1.9.0",
+    "webpack-cli": "^3.2.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
