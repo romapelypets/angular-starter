@@ -9,13 +9,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ssr": "npm run build:universal && npm run compile:server && npm run generate:prerender && npm run server",
-    "server": "node dist/server.js",
-    "generate:prerender": "node dist/prerender.js",
-    "compile:server": "tsc -p server.tsconfig.json",
+    "ssr": "npm run build:universal && npm run generate:prerender && npm run server",
+    "server": "node server.js",
+    "generate:prerender": "node prerender.js",
     "build": "ng build",
     "build:server": "ng run angular-starter:server:production",
-    "build:universal": "npm run build --prod && ng run angular-starter:server:production && webpack --config webpack.server.config.js --progress --colors"
+    "build:universal": "npm run prod && ng run angular-starter:server:production && webpack --config webpack.server.config.js --progress --colors"
   },
   "private": true,
   "dependencies": {

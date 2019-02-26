@@ -4,6 +4,9 @@
 /dist
 /tmp
 /out-tsc
+/static
+server.js
+prerender.js
 
 # dependencies
 /node_modules
