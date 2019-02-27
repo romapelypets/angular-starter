@@ -17,3 +17,22 @@ Because ng serve does not work with service workers, you must use a separate HTT
 To serve the directory containing your web files with http-server, run the following command: <br>
 `cd dist/browser` <br>
 `http-server -p 8080`
+
+## Firebase
+### Configuration
+
+Open `/src/environments/environment.ts` and add your Firebase configuration:
+
+```javascript
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: '<your-key>',
+    authDomain: '<your-project-authdomain>',
+    databaseURL: '<your-database-URL>',
+    projectId: '<your-project-id>',
+    storageBucket: '<your-storage-bucket>',
+    messagingSenderId: '<your-messaging-sender-id>'
+  }
+};
+```
