@@ -12,22 +12,22 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '@env/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-app'}),
+    BrowserModule.withServerTransition({ appId: 'my-app' }),
     CoreModule,
     SharedModule,
     AppRoutingModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    
+
     AuthModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
