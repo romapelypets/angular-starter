@@ -75,7 +75,7 @@
     "hooks": {
       "format:fix": "pretty-quick --staged",
       "lint": "ng lint",
-      "pre-commit": "run-s format:fix lint"
+      "precommit": "run-s format:fix lint"
     }
   }
 }
