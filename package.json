@@ -14,7 +14,7 @@
     "generate:prerender": "node prerender.js",
     "build": "ng build",
     "build:server": "ng run angular-starter:server:production",
-    "build:universal": "npm run prod && ng run angular-starter:server:production && webpack --config webpack.server.config.js --progress --colors"
+    "build:universal": "npm run prod && ng run angular-starter:server:production && webpack --config webpack.config.js --progress --colors"
   },
   "private": true,
   "dependencies": {
