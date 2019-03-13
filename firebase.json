@@ -1,14 +1,10 @@
 {
   "hosting": {
     "public": "./dist/browser",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
-        "source" : "**/*.@(css|js)",
+        "source": "**/*.@(css|js)",
         "destination": "/index-1.html"
       },
       {
