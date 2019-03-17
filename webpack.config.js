@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: {  
+  entry: {
     server: './server.ts',
     prerender: './prerender.ts'
   },
@@ -12,13 +12,11 @@ module.exports = {
   // this makes sure we include node_modules and other 3rd party libraries
   externals: [/(node_modules|main\..*\.js)/],
   output: {
-    path: path.join(__dirname),
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js'
   },
   module: {
-    rules: [
-      { test: /\.ts$/, loader: 'ts-loader' }
-    ]
+    rules: [{ test: /\.ts$/, loader: 'ts-loader' }]
   },
   plugins: [
     new webpack.ContextReplacementPlugin(
@@ -32,4 +30,4 @@ module.exports = {
       {}
     )
   ]
-}
+};

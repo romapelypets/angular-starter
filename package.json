@@ -10,8 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ssr": "npm run build:universal && npm run generate:prerender && npm run server",
-    "server": "node server.js",
-    "generate:prerender": "node prerender.js",
+    "server": "node dist/server",
+    "generate:prerender": "node dist/prerender.js",
     "build": "ng build",
     "build:server": "ng run angular-starter:server:production",
     "build:universal": "npm run prod && ng run angular-starter:server:production && webpack --config webpack.config.js --progress --colors"
