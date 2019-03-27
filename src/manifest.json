@@ -1,6 +1,8 @@
 {
   "name": "angular-starter",
   "short_name": "ng-starter",
+  "description": "PWA Angular 7 Starter",
+  "orientation": "portrait",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

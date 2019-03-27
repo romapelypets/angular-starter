@@ -23,7 +23,7 @@ import { environment } from '@env/environment';
     AngularFirestoreModule,
 
     AuthModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
+    ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     })
   ],
