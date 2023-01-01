@@ -27,7 +27,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^7.1.1",
     "core-js": "^2.6.5",
     "npm": "^6.9.0",
-    "ts-loader": "^5.3.3",
+    "ts-loader": "^9.4.2",
     "@nguniversal/express-engine": "^7.1.1",
     "@nguniversal/common": "^7.1.1",
     "reflect-metadata": "^0.1.13"
